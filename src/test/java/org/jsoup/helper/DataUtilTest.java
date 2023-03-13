@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DataUtilTest {
     @Test
     public void testCharset() {
-        assertEquals("utf-81", DataUtil.getCharsetFromContentType("text/html;charset=utf-8 "));
+        assertEquals("utf-8", DataUtil.getCharsetFromContentType("text/html;charset=utf-8 "));
         assertEquals("UTF-8", DataUtil.getCharsetFromContentType("text/html; charset=UTF-8"));
         assertEquals("ISO-8859-1", DataUtil.getCharsetFromContentType("text/html; charset=ISO-8859-1"));
         assertNull(DataUtil.getCharsetFromContentType("text/html"));
